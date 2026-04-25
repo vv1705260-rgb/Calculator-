@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.calculator {
+    background: #1e293b;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 380px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    color: white;
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.header p {
+    color: #94a3b8;
+    font-size: 12px;
+}
+
+.display {
+    background: #0f172a;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: right;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.previous-operand {
+    color: #64748b;
+    font-size: 18px;
+    min-height: 24px;
+}
+
+.current-operand {
+    color: white;
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.btn {
+    border: none;
+    border-radius: 12px;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Roboto Mono', monospace;
+    padding: 20px;
+    cursor: pointer;
+    transition: all 0.2s;
+    background: #334155;
+    color: white;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+.btn.number {
+    background: #334155;
+}
+
+.btn.number:hover {
+    background: #475569;
+}
+
+.btn.operator {
+    background: #f59e0b;
+    color: white;
+}
+
+.btn.operator:hover {
+    background: #d97706;
+}
+
+.btn.clear {
+    background: #ef4444;
+}
+
+.btn.clear:hover {
+    background: #dc2626;
+}
+
+.btn.equals {
+    background: #10b981;
+}
+
+.btn.equals:hover {
+    background: #059669;
+}
+
+.btn.zero {
+    grid-column: span 2;
+}
+
+footer {
+    margin-top: 30px;
+    text-align: center;
+    color: white;
+    font-size: 14px;
+}
+
+footer a {
+    color: #fbbf24;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 400px) {
+   .calculator {
+        padding: 20px;
+    }
+   .btn {
+        padding: 16px;
+        font-size: 18px;
+    }
+   .current-operand {
+        font-size: 28px;
+    }
+  }
